@@ -4,6 +4,7 @@ import MyPhoto from "../../public/ak_3.jpg";
 import Image from "next/image";
 import Link from "next/link";
 
+
 const Home = () => {
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -31,12 +32,12 @@ const Home = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 2 }}
-              className="text-white text-[25px] sm:text-[40px] lg:text-[33px] font-medium"
+              className="text-white text-[25px]  sm:text-[40px] lg:text-[33px] font-semibold"
             >
               Karimov Abdulatif
             </motion.div>
 
-            <h1 className="text-slate-400 text-[25px] sm:text-[35px] lg:text-[45px] font-bold mt-2">
+            <h1 className="text-slate-400 text-[25px] sm:text-[35px] lg:text-[45px] font-bold mt-3">
               I am a <span className="text-white">Frontend developer</span>
             </h1>
 
