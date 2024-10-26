@@ -2,49 +2,61 @@
 import { motion } from "framer-motion";
 import MyPhoto from "../../public/ak_3.jpg";
 import Image from "next/image";
+import Link from "next/link";
 
 const Home = () => {
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
       <section>
-        <div className="flex">
-         <div className="pt-[150px]">
-         <div>
-            <p className="text-slate-400 text-[25px] font-medium">
+        <div className="flex flex-col lg:flex-row items-center lg:items-start">
+          <div className="flex justify-center lg:hidden pt-[30px] sm:pt-[30px]">
+            <Image
+              src={MyPhoto}
+              alt="Avatar"
+              className="w-[200px] h-[200px] rounded-full"
+              width={200}
+              height={200}
+            />
+          </div>
+
+          <div className="text-center lg:text-left mt-4 lg:mt-0 lg:ml-8 md:pt-[150px]">
+            <p className="text-slate-400 lg:text-[25px] sm:text-[50px] font-medium">
               Hello, my name is
             </p>
-          </div>
-          <div className="pb-[30px]">
-            {" "}
+
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 2 }}
-              className="text-white text-[33px] font-medium"
+              className="text-white text-[22px] sm:text-[30px] lg:text-[33px] font-medium mt-5"
             >
-              <p className="text-white text-[33px] font-medium">
-                Karimov Abdulatif
-              </p>
+              Karimov Abdulatif
             </motion.div>
-          </div>
-          <div>
-            <h1 className="text-slate-400 text-[45px] font-semibold pb-[25px]">
+
+            <h1 className="text-slate-400 text-[25px] sm:text-[32px] lg:text-[45px] font-bold mt-2">
               I am a <span className="text-white">Frontend developer</span>
             </h1>
-            <p className="text-white w-[700px] text-[20px] pb-7">
-              I am a professional web developer. I can create FrontEnd part of a
-              website. If you interested click the button.
-            </p>
-          <div>
-            <button className="px-[40px] animate-pulse py-2 text-[18px] font-medium text-white bg-slate-700 opacity-[0.03px] rounded-md">
-              More about me
-            </button>
-          </div>
-          </div>
-         </div>
 
-          <div className="pt-[100px]">
-            <Image src={MyPhoto} alt="Avatar" className="w-[400px] h-[410px] rounded-[700px]"/>
+            <p className="text-white lg:w-[700px] lg:text-[20px] mt-4 px-4 lg:px-0">
+              I am a professional web developer. I can create FrontEnd part of
+              a website. If you interested click the button.
+            </p>
+
+            <div className="mt-6">
+              <Link href="/about">
+                <button className="px-8 py-2 text-[16px] lg:text-[18px] font-medium text-white bg-slate-700 opacity-80 rounded-md animate-pulse">
+                  More about me
+                </button>
+              </Link>
+            </div>
+          </div>
+
+          <div className="hidden lg:block lg:pt-[100px] lg:pl-12">
+            <Image
+              src={MyPhoto}
+              alt="Avatar"
+              className="w-[400px] h-[410px] rounded-full"
+            />
           </div>
         </div>
       </section>

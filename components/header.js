@@ -23,7 +23,9 @@ const Header = () => {
       <header>
         <div className="flex justify-between items-center pt-3 pb-3">
           <div>
-            <p className="text-4xl font-semibold text-slate-400">Abdulatif</p>
+            <Link href="/home-page">
+            <p className="text-4xl pl-7 font-semibold text-slate-400">Abdulatif</p>
+            </Link>
           </div>
 
           <div className="hidden md:flex gap-8 pr-[150px] pt-[8px] text-slate-400 font-medium">
