@@ -21,10 +21,12 @@ const Header = () => {
   return (
     <div className="container mx-auto">
       <header>
-        <div className="flex justify-between items-center pt-3 pb-3">
+        <div className="flex justify-between items-center pt-3 pb-2">
           <div>
             <Link href="/home-page">
-            <p className="text-4xl pl-7 font-semibold text-slate-400">Abdulatif</p>
+              <p className="text-3xl sm:text-2xl lg:text-4xl lg:pl-7 sm:pl-0 font-semibold text-slate-400">
+                Abdulatif
+              </p>
             </Link>
           </div>
 
@@ -57,10 +59,15 @@ const Header = () => {
           }`}
         >
           <div className="flex justify-end">
+            <p className="text-slate-300 text-[25px] font-semibold pr-[90px]">
+              Abdulatif
+            </p>
             <button onClick={toggleMenu} aria-label="Close Menu">
               <HiX className="text-3xl text-slate-400" />
             </button>
+            <hr />
           </div>
+          <hr className="lg:hidden mt-[10px] opacity-20" />
 
           <div className="flex flex-col gap-4 mt-6 text-white font-medium">
             {links.map((item, index) => (
